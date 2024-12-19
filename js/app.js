@@ -100,7 +100,7 @@ function initializeFormSubmissions() {
           };
           saveUsersToStorage(users);
           alert("User registered successfully!");
-          window.location.href = "login.html";
+          window.location.href = "index.html";
         };
         reader.readAsDataURL(profilePictureFile);
       } else {
@@ -115,7 +115,7 @@ function initializeFormSubmissions() {
         };
         saveUsersToStorage(users);
         alert("User registered successfully!");
-        window.location.href = "login.html";
+        window.location.href = "index.html";
       }
     });
   }
@@ -190,7 +190,7 @@ function initializeFriendManagement() {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", function (event) {
       localStorage.removeItem("currentUser");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     });
   }
 
@@ -730,7 +730,7 @@ function displayProfile() {
     const currentUser = getCurrentUser();
     if (!currentUser) {
       alert("No user is currently logged in.");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
       return;
     }
     userToDisplay = currentUser;
